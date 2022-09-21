@@ -1,0 +1,11 @@
+1. Nút "Check" để trả xe chỉ hiện lên khi khách hàng đã thuê một chiếc xe và trạng thái đang là "Renting"
+2. Khi trả xe khách hàng cần chọn Bank Account và Station Code để tiến hành trả xe
+   - Khách hàng có thể chọn những Bank Account mà họ đã cung cấp cho hệ thống hoặc có thế thêm vào 1 Bank Account mới
+     bằng cách chọn "Use other" trong choice box Bank Account 
+   - Khi khách hàng chọn thêm 1 Bank Account mới thì 1 popup sẽ hiện lên để khách hàng nhập thông tin ngân hàng mới,
+     các trường thông tin này đều được kiểm tra thỏa mãn các điều kiện mới có thể thêm vào danh sách Bank Account
+   - Ở choice box station code sẽ chỉ hiện lên những station mà vẫn còn chỗ trống, mỗi khi ta chọn 1 station code
+     thì màn hình sẽ hiện lên thông tin và trạng thái về số lượng chỗ của staion đó
+   - Sau khi tiến hành trả xe, hệ thống sẽ gửi một email đến email của khách hàng để thông báo giao dịch thành công
+     cùng với thông tin về xe, bãi xe và thông tin thanh toán của khách hàng.
+3. Sau khi trả xe thành công, trạng thái sẽ trở về "No bike rented" và nút "Check" bị ẩn đi
