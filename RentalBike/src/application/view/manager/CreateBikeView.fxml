@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.manager.CreateBikeViewController">
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#didTapBackBtn" text="back" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Button layoutX="831.0" layoutY="14.0" mnemonicParsing="false" onAction="#didTapExitBtn" text="exit" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Label layoutX="234.0" layoutY="180.0" text="Name" />
+      <TextField fx:id="tfName" layoutX="405.0" layoutY="169.0" prefHeight="27.0" prefWidth="295.0" />
+      <Label layoutX="236.0" layoutY="220.0" text="Manufacturer" />
+      <TextField fx:id="tfManufacturer" layoutX="405.0" layoutY="209.0" prefHeight="27.0" prefWidth="295.0" />
+      <Label layoutX="236.0" layoutY="261.0" text="Weight (kg)" />
+      <TextField fx:id="tfWeight" layoutX="405.0" layoutY="250.0" prefHeight="27.0" prefWidth="295.0" />
+      <Label layoutX="236.0" layoutY="304.0" text="Cost ($)" />
+      <TextField fx:id="tfCost" layoutX="405.0" layoutY="293.0" prefHeight="27.0" prefWidth="295.0" />
+      <Label layoutX="236.0" layoutY="407.0" text="Category code" />
+      <ChoiceBox fx:id="cbCategoryType" layoutX="403.0" layoutY="396.0" prefWidth="150.0" />
+      <Label layoutX="236.0" layoutY="453.0" text="Station code" />
+      <ChoiceBox fx:id="cbStationCode" layoutX="403.0" layoutY="442.0" prefWidth="150.0" />
+      <DatePicker fx:id="dpDate" layoutX="404.0" layoutY="342.0" prefHeight="27.0" prefWidth="295.0" />
+      <Label layoutX="236.0" layoutY="353.0" text="Manufacture Date" />
+      <Label layoutX="307.0" layoutY="58.0" text="Create New Bike Information">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIndicator" layoutX="327.0" layoutY="505.0" text="Invalid information!" textFill="#dd0e0e" />
+      <Button layoutX="645.0" layoutY="500.0" mnemonicParsing="false" onAction="#didTapSubmit" text="submit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.LoginViewController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" layoutX="126.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../asset/bg_login.jpeg" />
+         </image>
+         <viewport>
+            <Rectangle2D height="600.0" width="600.0" />
+         </viewport>
+      </ImageView>
+      <Label layoutX="694.0" layoutY="68.0" text="Rental Bike">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="690.0" layoutY="181.0" spacing="50.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#didTapLoginAsCustomer" text="Login as Customer" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#didTapLoginAsManager" text="Login as Manager" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

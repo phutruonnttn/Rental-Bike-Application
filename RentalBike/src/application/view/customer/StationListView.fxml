@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.customer.StationListViewController">
+   <children>
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="900.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane layoutX="1.0" layoutY="199.0" prefHeight="402.0" prefWidth="900.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="190.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="table" prefHeight="0.0" prefWidth="900.0">
+              <columns>
+                <TableColumn fx:id="stationId" prefWidth="108.0" text="Station ID" />
+                <TableColumn fx:id="stationName" prefWidth="200.0" text="Name" />
+                  <TableColumn fx:id="stationAdd" prefWidth="214.0" text="Address" />
+                  <TableColumn fx:id="stationCap" prefWidth="187.0" text="Capacity" />
+                  <TableColumn fx:id="avaiBike" prefWidth="190.0" text="Available Capacity" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
+      <Pane layoutX="659.0" layoutY="40.0" prefHeight="59.0" prefWidth="236.0" style="-fx-border-color: black; -fx-border-radius: 3%;" />
+      <Button fx:id="btnReturnBike" layoutX="810.0" layoutY="56.0" mnemonicParsing="false" onAction="#didtapReturnBike" prefHeight="22.0" prefWidth="69.0" text="Check" />
+      <Button layoutX="25.0" layoutY="56.0" mnemonicParsing="false" onAction="#diTapExitBtn" prefHeight="25.0" prefWidth="58.0" text="Back" />
+      <Label fx:id="rentBikeStatus" layoutX="741.0" layoutY="59.0" text="Renting">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="686.0" layoutY="59.0" text="Status:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="282.0" layoutY="36.0" prefHeight="70.0" prefWidth="339.0" text="Station Management">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="189.0" layoutY="114.0" prefHeight="59.0" prefWidth="525.0">
+         <children>
+            <Label prefHeight="31.0" prefWidth="79.0" text="Discover:" />
+            <TextField fx:id="textF" prefHeight="31.0" prefWidth="252.0" />
+            <Button mnemonicParsing="false" onAction="#diTapSearchBtn" prefHeight="31.0" prefWidth="56.0" text="Go" />
+            <Button mnemonicParsing="false" onAction="#diTapResetBtn" prefHeight="31.0" prefWidth="80.0" text="Reset" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

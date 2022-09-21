@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" text="Bill information" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.customer.BillViewController">
+   <content>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Pane prefHeight="88.0" prefWidth="874.0" style="-fx-border-color: black; -fx-border-radius: 4px;">
+               <children>
+                  <Label layoutX="16.0" layoutY="16.0" text="User information">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="51.0" text="Name" />
+                  <Label fx:id="customerName" layoutX="200.0" layoutY="51.0" text="Nguyen Manh Tien" />
+                  <Label layoutX="450.0" layoutY="51.0" text="Email" />
+                  <Label fx:id="email" layoutX="650.0" layoutY="51.0" text="manhtien@gmail.com" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="4.0" />
+               </VBox.margin>
+            </Pane>
+            <ScrollPane prefViewportHeight="371.0" prefViewportWidth="958.27587890625">
+               <content>
+                  <Pane prefHeight="381.0" prefWidth="874.0" style="-fx-border-color: black; -fx-border-radius: 4px;">
+                     <children>
+                        <Label layoutX="16.0" layoutY="16.0" text="Bill information">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="59.0" text="Bike code" />
+                        <Label layoutX="16.0" layoutY="96.0" text="Bike name" />
+                        <Label layoutX="16.0" layoutY="133.0" text="Bike type" />
+                        <Label layoutX="16.0" layoutY="170.0" text="Bike weight" />
+                        <Label layoutX="16.0" layoutY="207.0" text="License plate" />
+                        <Label layoutX="16.0" layoutY="243.0" text="Manuafacturing date" />
+                        <Label layoutX="16.0" layoutY="281.0" text="Producer" />
+                        <Label fx:id="bikeCodeLabel" layoutX="200.0" layoutY="59.0" text="B12345" />
+                        <Label fx:id="bikeName" layoutX="200.0" layoutY="96.0" text="Race Bike" />
+                        <Label fx:id="typeBike" layoutX="200.0" layoutY="133.0" text="Bike" />
+                        <Label fx:id="weight" layoutX="200.0" layoutY="170.0" text="4 " />
+                        <Label fx:id="licensePlate" layoutX="200.0" layoutY="207.0" text="29A-12345" />
+                        <Label fx:id="manuafacturingDate" layoutX="200.0" layoutY="243.0" text="20-10-2021" />
+                        <Label fx:id="producter" layoutX="200.0" layoutY="281.0" text="NMT" />
+                        <Label layoutX="450.0" layoutY="59.0" text="Station code" />
+                        <Label layoutX="450.0" layoutY="96.0" text="Station name" />
+                        <Label layoutX="450.0" layoutY="133.0" text="Station address" />
+                        <Label layoutX="450.0" layoutY="170.0" text="Deposit" />
+                        <Label layoutX="450.0" layoutY="207.0" text="Initial rent bike cost" />
+                        <Label layoutX="450.0" layoutY="243.0" text="Total amount" />
+                        <Label fx:id="stationCode" layoutX="650.0" layoutY="59.0" text="S12345" />
+                        <Label fx:id="stationName" layoutX="650.0" layoutY="96.0" text="Chua Lang" />
+                        <Label fx:id="stationAddress" layoutX="650.0" layoutY="133.0" text="128-Chua Lang" />
+                        <Label fx:id="deposit" layoutX="650.0" layoutY="170.0" text="400.000" />
+                        <Label fx:id="baseFee" layoutX="650.0" layoutY="207.0" text="10.000" />
+                        <Label fx:id="totalFee" layoutX="650.0" layoutY="243.0" text="410.000" />
+                        <Label layoutX="16.0" layoutY="310.0" maxWidth="800.0" prefHeight="53.0" prefWidth="800.0" text="*Note: Different type of bike will have different cost, renting cost twin bike and e-bike will higher 1.5 times than bike. " />
+                        <Label layoutX="219.0" layoutY="170.0" text="kg" />
+                     </children>
+                  </Pane>
+               </content>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ScrollPane>
+            <HBox prefHeight="75.0" prefWidth="874.0">
+               <children>
+                  <Pane prefHeight="86.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="cancel" contentDisplay="CENTER" layoutX="139.0" layoutY="18.0" mnemonicParsing="false" onAction="#cancelBill" prefHeight="40.0" prefWidth="100.0" text="Cancel" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="confirm" layoutX="177.0" layoutY="18.0" mnemonicParsing="false" onAction="#confirmBill" prefHeight="40.0" prefWidth="100.0" text="Confirm" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </content>
+</TitledPane>

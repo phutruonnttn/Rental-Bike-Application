@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.customer.ReturnBikeViewController">
+   <top>
+      <VBox minHeight="-Infinity" prefHeight="85.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Option">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox alignment="TOP_CENTER" minHeight="-Infinity">
+               <children>
+                  <Label alignment="CENTER" text="Return Renting Bike" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#didTapCancelBtn" text="Cancel">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="30.0" right="70.0" top="30.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#didTapReturnBtn" text="Return">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="70.0" right="30.0" top="30.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="134.0" prefWidth="900.0" style="-fx-border-style: solid; -fx-border-radius: 10;">
+               <children>
+                  <Label layoutX="76.0" layoutY="9.0" text="User information">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="55.0" text="Name:" />
+                  <Label fx:id="lbName" layoutX="154.0" layoutY="55.0" text="Nguyen Phu Truong">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="50.0" layoutY="92.0" text="Bank account:" />
+                  <Label layoutX="508.0" layoutY="55.0" text="Code:" />
+                  <Label fx:id="lbID" layoutX="563.0" layoutY="55.0" text="KH12345">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="508.0" layoutY="92.0" text="Email:" />
+                  <Label fx:id="lbEmail" layoutX="563.0" layoutY="92.0" text="phutruongnttn@gmail.com">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="cbBankAccount" layoutX="154.0" layoutY="88.0" onAction="#didChoiceBankAccountCb" prefHeight="25.0" prefWidth="197.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Pane>
+            <HBox prefHeight="281.0" prefWidth="900.0">
+               <children>
+                  <Pane prefHeight="281.0" prefWidth="440.0" style="-fx-border-style: solid; -fx-border-radius: 10;">
+                     <children>
+                        <Label layoutX="146.0" layoutY="9.0" text="Bill information">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="80.0" layoutY="56.0" text="Bike code:" />
+                        <Label layoutX="80.0" layoutY="126.0" text="Rental time:" />
+                        <Label layoutX="80.0" layoutY="161.0" text="Total payment:" />
+                        <Label layoutX="80.0" layoutY="196.0" text="Deposit amount:" />
+                        <Label fx:id="lbTitleRemainingAmount" layoutX="80.0" layoutY="231.0" text="Remaining amount:" />
+                        <Label fx:id="lbBikeCode" layoutX="223.0" layoutY="56.0" text="B12345">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="lbRentalTime" layoutX="223.0" layoutY="126.0" text="2 hours 15 mimutes">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="lbTotalPayment" layoutX="223.0" layoutY="161.0" text="31.000 VND">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="lbDepositAmount" layoutX="223.0" layoutY="196.0" text="410.000 VND">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="lbRemainingAmount" layoutX="223.0" layoutY="231.0" text="379.000 VND">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="80.0" layoutY="91.0" text="Bike type:" />
+                        <Label fx:id="lbBikeType" layoutX="223.0" layoutY="91.0" text="Bike">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbTitleExtraAmount" layoutX="80.0" layoutY="231.0" text="Extra amount:" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane prefHeight="281.0" prefWidth="440.0" style="-fx-border-style: solid; -fx-border-radius: 10;">
+                     <children>
+                        <Label layoutX="75.0" layoutY="15.0" text="Choose station to return bike">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="70.0" layoutY="80.0" text="Station code:" />
+                        <Label layoutX="70.0" layoutY="120.0" text="Station name:" />
+                        <Label layoutX="70.0" layoutY="160.0" text="Station address:" />
+                        <Label fx:id="lbStationName" layoutX="190.0" layoutY="120.0" text="Chua Lang">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="lbStationAddress" layoutX="190.0" layoutY="160.0" text="128 - Chua Lang">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="70.0" layoutY="200.0" text="Status:" />
+                        <Label fx:id="lbStatus" layoutX="190.0" layoutY="200.0" text="10/15">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <ChoiceBox fx:id="cbStationCode" layoutX="190.0" layoutY="76.0" onAction="#didChoiceStationCodeCb" prefWidth="150.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

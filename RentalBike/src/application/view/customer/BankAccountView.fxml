@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" text="Bank account infomation" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.customer.BankAccountViewController">
+   <content>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Pane prefHeight="258.0" prefWidth="874.0" style="-: black;">
+               <children>
+                  <HBox layoutY="-2.0" prefHeight="259.0" prefWidth="874.0">
+                     <children>
+                        <Pane fx:id="currentBankLabel" prefHeight="200.0" prefWidth="437.0" style="-fx-border-radius: 4px; -fx-border-color: black;">
+                           <children>
+                              <RadioButton fx:id="currentBankAccount" layoutX="127.0" layoutY="8.0" mnemonicParsing="false" onAction="#choseCurrentBankAccount" text="Use Current bank account" />
+                              <ChoiceBox fx:id="choiceBoxBankACcount" layoutX="67.0" layoutY="105.0" prefHeight="50.0" prefWidth="300.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets right="4.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <Pane fx:id="newBankAccountLabel" prefHeight="200.0" prefWidth="437.0" style="-fx-border-color: black; -fx-border-radius: 4px;">
+                           <children>
+                              <TextField fx:id="cardNumberValue" layoutX="205.0" layoutY="82.0" />
+                              <TextField fx:id="holdNameValue" layoutX="205.0" layoutY="45.0" />
+                              <TextField fx:id="securityCodeValue" layoutX="205.0" layoutY="193.0" />
+                              <RadioButton fx:id="newBankAccount" layoutX="127.0" layoutY="8.0" mnemonicParsing="false" onAction="#choseNewBankAccount" text="Use other bank account" />
+                              <Label layoutX="16.0" layoutY="50.0" text="Card holder name" />
+                              <Label layoutX="16.0" layoutY="161.0" text="Expiration date" />
+                              <Label layoutX="16.0" layoutY="87.0" text="Card number" />
+                              <Label layoutX="16.0" layoutY="124.0" text="Issuing bank" />
+                              <Label layoutX="16.0" layoutY="198.0" text="Security code" />
+                              <Label fx:id="warming" layoutX="16.0" layoutY="228.0" text="Notice" textFill="#e10b0b" />
+                              <Label fx:id="warmingValue" layoutX="87.0" layoutY="228.0" text="Label" textFill="#e41717" />
+                              <ComboBox fx:id="issueBankValue" layoutX="205.0" layoutY="119.0" />
+                              <DatePicker fx:id="expirationDateValue" layoutX="205.0" layoutY="156.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Pane prefHeight="181.0" prefWidth="792.0" style="-fx-border-color: black; -fx-border-radius: 4px;">
+               <children>
+                  <Label layoutX="31.0" layoutY="14.0" text="Transaction description" />
+                  <TextArea fx:id="transationDiscription" layoutX="31.0" layoutY="36.0" prefHeight="132.0" prefWidth="831.0" style="-fx-border-color: black;" />
+               </children>
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+            </Pane>
+            <Pane prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox layoutX="-4.0" prefHeight="100.0" prefWidth="879.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="439.0">
+                           <children>
+                              <Button fx:id="cancel" layoutX="187.0" layoutY="35.0" mnemonicParsing="false" onAction="#cancelBankAccount" prefHeight="40.0" prefWidth="100.0" text="Cancel" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="439.0">
+                           <children>
+                              <Button fx:id="confirm" layoutX="170.0" layoutY="30.0" mnemonicParsing="false" onAction="#confirmBankAccount" prefHeight="40.0" prefWidth="100.0" text="Confirm" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </content>
+</TitledPane>

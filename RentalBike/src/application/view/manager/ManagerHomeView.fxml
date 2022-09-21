@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.manager.ManagerHomeViewController">
+   <children>
+      <VBox layoutX="368.0" layoutY="240.0" spacing="90.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#didTapStation" text="Create new station">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCreateBike" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#didTapBike" text="Create new bike">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Button layoutX="831.0" layoutY="14.0" mnemonicParsing="false" onAction="#didTapExit" text="Exit" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Label layoutX="305.0" layoutY="62.0" text="Manager home">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
